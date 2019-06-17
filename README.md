@@ -14,7 +14,7 @@ I tried to be minimalistic and realistic. While I was given the choice to pick u
 - normalized distance from hand-picked POI (qp09d8, qp03xx, qp03wf)
 - datetime features day, hour, per-fifteen-mins - sin/cos equivalent
 - last 2 hours demands - T, T-1, T-2, .. T-7
-- last 7 days demands of the predicted time +/- 1 hour - (day-1 T-3, T-2 ... T+9), (day-2 T-3 ... T+9) ... (day-7 T-3, ... T+9)
+- last 7 days demands of the predicted time window +/- 1 hour - (day-1 T-3, T-2 ... T+9), (day-2 T-3 ... T+9) ... (day-7 T-3, ... T+9)
 
 ## Model summary
 - Last 7 days features feed into a RNN
@@ -25,7 +25,7 @@ I tried to be minimalistic and realistic. While I was given the choice to pick u
 - Outputs of all above serve as metadata and feed into another DNN to predict next 5 demands
 
 ## Hyperparameter tuning
-This is rather tricky and time-consuming. I tried a rather complex model with more nodes and layers, it turned out the complex model converges to bad local minima very easily so I decided to give that up after an overnight hyperparameter tuning job and still couldn't yield any satisfying result. While relying on a lucky seed and learning rate, I was able to hit a relatively decent result using my small and simple model.
+This is rather tricky and time-consuming. I tried a rather complex model with more nodes and layers, it turned out the complex model converges to bad local minima very easily so I decided to give that up after an overnight hyperparameter tuning job and still couldn't yield any satisfying result. While relying on a lucky seed and learning rate, I was able to hit a relatively decent result (RMSE ~ 0.015, SMAPE ~ 50%) using my small and simple model.
 
 ## Reference
 - https://github.com/Arturus/kaggle-web-traffic
