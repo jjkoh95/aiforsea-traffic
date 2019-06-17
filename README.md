@@ -10,7 +10,7 @@
 - start notebook/5-model-evaluation and look for Evaluation/Submission tab
 
 ## Feature engineering
-I tried to be minimalistic and realistic at the same time. While I was given the choice to pick up to 2 weeks of historical data, I found that with only 8 weeks of data, if I did a walk-forward split of my training data, I would end up with about 4 weeks of training data (with very little validation data).
+I tried to be minimalistic and realistic. While I was given the choice to pick up to 2 weeks of historical data, I found that with only 8 weeks of data, if I did a walk-forward split of my training data, I would end up with about 4 weeks of training data (with very little validation data).
 - normalized distance from hand-picked POI (qp09d8, qp03xx, qp03wf)
 - datetime features - sin/cos equivalent
 - last 2 hours demands
