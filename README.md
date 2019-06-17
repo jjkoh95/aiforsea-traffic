@@ -1,7 +1,7 @@
 # AI For SEA - Traffic Management
 
 ## Environment (main libraries used)
-I suppose Python 3.6 and tensorflow 1.3 should work fine with the code.
+I suppose Python 3.6 and tensorflow 1.13 should work fine with the code.
 - Python 3.7
 - Tensorflow 1.14.1 (tf-nightly)
 - Keras 2.2.4
