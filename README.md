@@ -1,13 +1,14 @@
 # AI For SEA - Traffic Management
 
 ## Environment (main libraries used)
+I suppose Python 3.6 and tensorflow 1.3 should work fine with the code.
 - Python 3.7
 - Tensorflow 1.14.1 (tf-nightly)
 - Keras 2.2.4
 
 ## To evaluate test dataset
 - install any necessary packages (requirements.txt is not optimised as it inherits my base conda environment)
-- start notebook/5-model-evaluation and look for Evaluation/Submission tab
+- start notebooks/5-model-evaluation and look for Evaluation/Submission tab
 
 ## Feature engineering
 I tried to be minimalistic and realistic. While I was given the choice to pick up to 2 weeks of historical data, I found that with only 8 weeks of data, if I did a walk-forward split of my training data, I would end up with about 4 weeks of training data (with very little validation data).
@@ -25,7 +26,7 @@ I tried to be minimalistic and realistic. While I was given the choice to pick u
 - Outputs of all above serve as metadata and feed into another DNN to predict next 5 demands
 
 ## Hyperparameter tuning
-This is rather tricky and time-consuming. I tried a rather complex model with more nodes and layers, it turned out the complex model converges to bad local minima very easily so I decided to give that up after an overnight hyperparameter tuning job and still couldn't yield any satisfying result. While relying on a lucky seed and learning rate, I was able to hit a relatively decent result (RMSE ~ 0.015, SMAPE ~ 50%) using my small and simple model.
+This is rather tricky and time-consuming. I tried a rather complex model with more nodes and layers, it turned out the complex model converges to bad local minima very easily so I decided to give that up after an overnight hyperparameter tuning job and still couldn't yield any satisfying result. While relying on a lucky seed and learning rate, I was able to hit a relatively decent result using a less complex model.
 
 ## Reference
 - https://github.com/Arturus/kaggle-web-traffic
