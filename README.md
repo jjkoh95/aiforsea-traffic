@@ -12,9 +12,9 @@
 ## Feature engineering
 I tried to be minimalistic and realistic. While I was given the choice to pick up to 2 weeks of historical data, I found that with only 8 weeks of data, if I did a walk-forward split of my training data, I would end up with about 4 weeks of training data (with very little validation data).
 - normalized distance from hand-picked POI (qp09d8, qp03xx, qp03wf)
-- datetime features - sin/cos equivalent
-- last 2 hours demands
-- last 7 days demands of the predicted time +/- 1 hour
+- datetime features day, hour, per-fifteen-mins - sin/cos equivalent
+- last 2 hours demands - T, T-1, T-2, .. T-7
+- last 7 days demands of the predicted time +/- 1 hour - (day-1 T-3, T-2 ... T+9), (day-2 T-3 ... T+9) ... (day-7 T-3, ... T+9)
 
 ## Model summary
 - Last 7 days features feed into a RNN
